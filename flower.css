@@ -1,0 +1,77 @@
+body {
+    background-color: #f0f8ff; /* Light blue background */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1.text {
+    font-size: 3em;
+    color: #ff69b4; /* Hot pink color */
+    margin-top: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.flower {
+    width: 100px;
+    height: 100px;
+    background-color: #ffcc00; /* Yellow petals */
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    transition: transform 0.3s;
+}
+
+.flower:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+.flower::before,
+.flower::after {
+    content: '';
+    position: absolute;
+    background-color: #ff69b4; /* Pink color for petals */
+    border-radius: 50%;
+}
+
+.flower::before {
+    width: 100px;
+    height: 100px;
+    top: -50px; /* Position above */
+    left: 0;
+}
+
+.flower::after {
+    width: 100px;
+    height: 100px;
+    left: -50px; /* Position to the left */
+    top: 0;
+}
+
+.stem {
+    width: 10px;
+    height: 100px;
+    background-color: #228b22; /* Forest green for the stem */
+    margin: 0 auto;
+}
+
+.leaf {
+    width: 50px;
+    height: 25px;
+    background-color: #32cd32; /* Lime green for leaves */
+    border-radius: 25px;
+    position: absolute;
+    transform: rotate(-30deg);
+}
+
+.leaf.left {
+    top: 50px;
+    left: -25px;
+}
+
+.leaf.right {
+    top: 50px;
+    right: -25px;
+}
